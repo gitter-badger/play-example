@@ -16,11 +16,7 @@ create sequence person_seq;
 
 # --- !Downs
 
-SET REFERENTIAL_INTEGRITY FALSE;
-
-drop table if exists person;
-
-SET REFERENTIAL_INTEGRITY TRUE;
+drop table if exists person cascade;
 
 drop sequence if exists person_seq;
 
