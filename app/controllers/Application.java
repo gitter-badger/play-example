@@ -1,8 +1,6 @@
 package controllers;
 
 import models.Person;
-import play.api.libs.json.Json;
-import play.data.Form;
 import play.db.ebean.Model;
 import play.mvc.BodyParser;
 import play.mvc.Controller;
@@ -22,17 +20,11 @@ public class Application extends Controller {
     }
 
     @BodyParser.Of(BodyParser.Json.class)
-    public static Result addPerson2() {
-        Http.RequestBody body = request().body();
-        Person person = new Person(body.asJson().get("name").toString());
-        person.save();
-        return ok("Got json: " + body.asJson().get("name"));
-    }
-
     public static Result addPerson(){
-        Person person = Form.form(Person.class).bindFromRequest().get();
+        Http.RequestBody body = request().body();
+        Person person = new Person(body.asJson().get("name").asText());
         person.save();
-        return redirect(routes.Application.index());
+        return ok(toJson(person));
     }
 
     public static Result getPersons(){
