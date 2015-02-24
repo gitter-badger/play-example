@@ -16,18 +16,17 @@ public class Application extends Controller {
 
     public static Result index() {
         return ok(index.render("Your new application is ready."));
-
     }
 
     @BodyParser.Of(BodyParser.Json.class)
-    public static Result addPerson(){
+    public static Result addPerson() {
         Http.RequestBody body = request().body();
         Person person = new Person(body.asJson().get("name").asText());
         person.save();
         return ok(toJson(person));
     }
 
-    public static Result getPersons(){
+    public static Result getPersons() {
         List<Person> persons = new Model.Finder(String.class, Person.class).all();
         return ok(toJson(persons));
 

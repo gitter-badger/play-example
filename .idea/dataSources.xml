@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2821618893">
+    <data-source source="LOCAL" name="PostgreSQL - se2p@localhost" uuid="311453c5-209b-44e9-8d2e-521384cc2930">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/se2p</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

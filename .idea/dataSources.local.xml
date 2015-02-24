@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - se2p@localhost" uuid="311453c5-209b-44e9-8d2e-521384cc2930">
+      <secret-storage>master_key</secret-storage>
+      <user-name>se2p</user-name>
+      <schema-pattern>se2p.pg_catalog se2p.public</schema-pattern>
+      <default-schemas>se2p.pg_catalog se2p.public</default-schemas>
+    </data-source>
+  </component>
+</project>
