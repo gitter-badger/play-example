@@ -11,3 +11,5 @@ POST to add Person
 ===========================
 
 curl --header "Content-type: application/json" --request POST --data '{"name": "Guillaume"}' http://localhost:9000/addPerson
+
+Join the chat at https://gitter.im/pichichi91/play-example
